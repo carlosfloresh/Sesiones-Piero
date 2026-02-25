@@ -6,4 +6,6 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(untitled main.cpp
         example1.cpp
         example2.cpp
-        example2-Piero.cpp)
+        example2-Piero.cpp
+        sumMat.cpp
+        changeMats.cpp)
