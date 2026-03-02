@@ -10,23 +10,20 @@ using namespace std;
 int main()
 {
     int notas[5];
+    int *p = notas;
     cout << "A continuacion, ingresa la nota que sacaste en cada curso." << endl;
     int acumulador = 0, promedio = 0, nota = 0;
     for (int i = 0; i < 5; i++)
     {
         cout << "Nota en el curso " << i + 1 << ": ";
-        cin >> nota;
-        notas[i] = nota;
-    }
-    for (int i = 0; i < 5; i++)
-    {
-        acumulador += notas[i];
+        cin >> *(p+i);
+        acumulador += *(p+i);
     }
     promedio = (acumulador / 5);
     cout << "La nota promedio es: " << promedio << endl;
     cout << "Notas mayores al promedio.." << endl;
     for (int i = 0; i < 5; i++)
     {
-        if (notas[i] > promedio) cout << "Nota " << i << ": " << notas[i] << endl;
+        if (*(p+i) > promedio) cout << "Nota " << i << ": " << *(p+i) << endl;
     }
 }
