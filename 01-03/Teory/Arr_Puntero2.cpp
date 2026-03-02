@@ -3,7 +3,6 @@
 //
 
 #include <iostream>
-#include "Arr_Puntero3"
 using namespace std;
 
 int main()

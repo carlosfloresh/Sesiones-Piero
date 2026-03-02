@@ -9,5 +9,5 @@ add_executable(untitled main.cpp
         24-02/example2-Piero.cpp
         24-02/sumMat.cpp
         24-02/changeMats.cpp
-        01-03/march01.cpp
-        01-03/Arr_Puntero1.cpp)
+        01-03/Teory/march01.cpp
+        01-03/Teory/Arr_Puntero1.cpp)

@@ -12,9 +12,15 @@ void imprimir(int arr[]) {
     }
 }
 
+void imprimir2(int *p) {
+    for (int i = 0; i < 5; i++) {
+        cout << *(p+i) << " ";
+    }
+}
+
 int main()
 {
     int arr[5] = {10,20,30,40,50};
-    imprimir(arr);
+    imprimir2(arr);
     return 0;
 }
