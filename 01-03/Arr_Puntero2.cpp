@@ -1,0 +1,20 @@
+//
+// Created by cfloresh on 01/03/2026.
+//
+
+#include <iostream>
+#include "Arr_Puntero3"
+using namespace std;
+
+int main()
+{
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *p = arr;
+    for (int i = 0; i < 5; i++) {
+        *(p+i) *= 10;
+    }
+    for (int i = 0; i < 5; i++) {
+        cout << *(p+i)<<endl;
+    }
+    return 0;
+}
