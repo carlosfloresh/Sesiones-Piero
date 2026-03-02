@@ -3,8 +3,9 @@
 //
 
 #include <iostream>
-// El usuario dice cuantos nums quiere ingresar.
-// inicialziar arr -> cargar nums -> imprimir -> liberar memoria
+// Iniciar un array de forma dinamica....
+// Declarar el arr -> cin -> guardar ->
+// saber el mayor y menor numero.
 using namespace std;
 int main()
 {
