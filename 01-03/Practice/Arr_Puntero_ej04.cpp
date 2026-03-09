@@ -41,6 +41,7 @@ int main()
         cout << nuevoArray[i] << " ";
     }
     cout << "Size: " << cont << endl;
-    delete []notas;
+
+    delete [] notas;
     return 0;
 }
