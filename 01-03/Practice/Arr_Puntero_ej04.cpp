@@ -12,8 +12,9 @@ int main()
     int n;
     cout << "Ingrese una cantidad de numbers para su arrays: " << endl;
     cin >> n;
+
     int positivos = 0;
-    int* notas = new int[n];
+    int* notas = new int[n]; // 5
     cout << "A continuacion, ingresa la nota que sacaste en cada curso." << endl;
     for (int i = 0; i < n; i++)
     {
@@ -25,13 +26,20 @@ int main()
         cout << notas[i] << " ";
     }
     cout << endl;
-    int nuevoArray[positivos];
+
+
+    int nuevoArray[positivos]; // 2
+    int cont = 0;
     for (int i = 0; i < n; i++) {
-        if (notas[i] >= 0) nuevoArray[i] = notas[i];
+        if (notas[i] > 0) {
+            nuevoArray[cont] = notas[i];
+            cont++;
+        }
     }
     cout << "Tu nuevo array con solo positivos es: " << endl;
     for (int i = 0; i < positivos; i++) {
         cout << nuevoArray[i] << " ";
     }
+    cout << "Size: " << cont << endl;
     return 0;
 }
