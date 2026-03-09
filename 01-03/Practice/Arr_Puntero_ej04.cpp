@@ -9,6 +9,28 @@
 using namespace std;
 int main()
 {
-
+    int n;
+    cout << "Ingrese una cantidad de numbers para su arrays: " << endl;
+    cin >> n;
+    int* notas = new int[n];
+    cout << "A continuacion, ingresa la nota que sacaste en cada curso." << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Nota en el curso " << i + 1 << ": ";
+        cin >> notas[i];
+    }
+    for (int i = 0; i < n; i++) {
+        cout << notas[i] << " ";
+    }
+    cout << endl;
+    int* nuevoArray = new int[n];
+    for (int i = 0; i < n; i++) {
+        if (notas[i] >= 0) nuevoArray[i] = notas[i];
+        else continue;
+    }
+    cout << "Tu nuevo array con solo positivos es: " << endl;
+    for (int i = 0; i < n; i++) {
+        cout << nuevoArray[i] << " ";
+    }
     return 0;
 }
