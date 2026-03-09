@@ -30,12 +30,13 @@ int main() {
         cin >> arreglo2[i];
     }
     int n3 = n1 + n2;
-    int count = 0;
     int* arreglo3 = new int[n3];
-    for (int i = 0; i < n3; i++) {
-        if (count < n1) arreglo3[i] = arreglo1[i];
-        else if (count > n1) arreglo3[i] = arreglo2[i];
-        count++;
+
+    for (int i = 0; i < n1; i++) {
+        arreglo3[i] = arreglo1[i];
+    }
+    for (int i = 0; i < n2; i++) {
+        arreglo3[n1+i] = arreglo2[i];
     }
     cout << "Tu arreglo final seria: " << endl;
     for (int i = 0; i < n3; i++) {
