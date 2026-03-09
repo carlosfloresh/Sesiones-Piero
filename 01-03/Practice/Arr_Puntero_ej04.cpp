@@ -26,7 +26,10 @@ int main()
     int* nuevoArray = new int[n];
     for (int i = 0; i < n; i++) {
         if (notas[i] >= 0) nuevoArray[i] = notas[i];
-        else continue;
+        else {
+            n -= 1;
+            continue;
+        }
     }
     cout << "Tu nuevo array con solo positivos es: " << endl;
     for (int i = 0; i < n; i++) {
