@@ -10,4 +10,5 @@ add_executable(untitled main.cpp
         24-02/sumMat.cpp
         24-02/changeMats.cpp
         01-03/Teory/march01.cpp
-        01-03/Teory/Arr_Puntero1.cpp)
+        01-03/Teory/Arr_Puntero1.cpp
+        08-03/finalArr.cpp)
