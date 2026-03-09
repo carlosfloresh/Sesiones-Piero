@@ -1,5 +1,4 @@
 #include <iostream>
-
 using namespace std;
 // Iniciar un array de forma dinamica...  3 [1,2,3]
 // Declarar el arr -> cin -> guardar
@@ -9,9 +8,42 @@ using namespace std;
 
 // Iniciar un arr+arr2 de forma dinamica... arr5[1,2,3,100,-5]
 // Imprimir el size y los elementos
-
-int main()
-{
-
+int main() {
+    int n1, n2;
+    cout << "Ingrese una cantidad de numbers para su array 1: " << endl;
+    cin >> n1;
+    int* arreglo1 = new int[n1];
+    cout << "A continuacion, ingresa los valores para el primer arreglo" << endl;
+    for (int i = 0; i < n1; i++)
+    {
+        cout << "Valor para la posicion " << i << ": ";
+        cin >> arreglo1[i];
+    }
+    cout << endl;
+    cout << "Ingrese una cantidad de numbers para su array 2: " << endl;
+    cin >> n2;
+    int* arreglo2 = new int[n2];
+    cout << "A continuacion, ingresa los valores para su segundo arreglo" << endl;
+    for (int i = 0; i < n1; i++)
+    {
+        cout << "Valor para la posicion " << i << ": ";
+        cin >> arreglo2[i];
+    }
+    int n3 = n1 + n2;
+    int count = 0;
+    int* arreglo3 = new int[n3];
+    for (int i = 0; i < n3; i++) {
+        if (count < n1) arreglo3[i] = arreglo1[i];
+        else if (count > n1) arreglo3[i] = arreglo2[i];
+        count++;
+    }
+    cout << "Tu arreglo final seria: " << endl;
+    for (int i = 0; i < n3; i++) {
+        cout << arreglo3[i] << endl;
+    }
+    cout << endl;
+    delete []arreglo1;
+    delete []arreglo2;
+    delete []arreglo3;
     return 0;
 }
