@@ -4,11 +4,14 @@ project(untitled)
 set(CMAKE_CXX_STANDARD 20)
 
 add_executable(untitled main.cpp
-        24-02/example1.cpp
-        24-02/example2.cpp
-        24-02/example2-Piero.cpp
-        24-02/sumMat.cpp
-        24-02/changeMats.cpp
-        01-03/Teory/march01.cpp
-        01-03/Teory/Arr_Puntero1.cpp
-        08-03/finalArr.cpp)
+        ARRAYS/24-02/example1.cpp
+        ARRAYS/24-02/example2.cpp
+        ARRAYS/24-02/example2-Piero.cpp
+        ARRAYS/24-02/sumMat.cpp
+        ARRAYS/24-02/changeMats.cpp
+        ARRAYS/01-03/Teory/march01.cpp
+        ARRAYS/01-03/Teory/Arr_Puntero1.cpp
+        ARRAYS/08-03/finalArr.cpp
+        MATRICES/13-03/IntroMatriz.cpp
+        MATRICES/13-03/exercise01.cpp
+)
