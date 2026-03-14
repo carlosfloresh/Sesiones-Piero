@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 // Decirle al usuario ingrese filas y columnas ---> crear esa matriz dinamicamente y rellenar e imprimirlo.
-// Encontrar e imprimir el elemento mayor y su posicion
+// Encontrar e imprimir el elemento mayor y su posicion ................
 int main() {
     int rows, cols, mayor = 0;
     int posiRows = 0, posiCols = 0;
