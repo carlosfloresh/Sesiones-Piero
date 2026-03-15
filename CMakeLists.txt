@@ -14,5 +14,5 @@ add_executable(untitled main.cpp
         ARRAYS/08-03/finalArr.cpp
         MATRICES/13-03/IntroMatriz.cpp
         MATRICES/13-03/exercise01.cpp
-        "MATRICES/14-03/exercice functions.cpp"
+        "MATRICES/14-03/pointers_and_reference.cpp"
 )

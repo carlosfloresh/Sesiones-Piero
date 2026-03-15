@@ -3,9 +3,16 @@
 using namespace std;
 
 // Size
-void sizeMat(int *rows, int *cols) {
+
+// Pointers
+void sizeMatP(int *rows, int *cols) {
     cout << "Enter the size of rows: " << endl; cin >> *rows;
     cout << "Enter the size of cols: " << endl; cin >> *cols;
+}
+// Reference
+void sizeMatR(int &rows, int &cols) {
+    cout << "Enter the size of rows: " << endl; cin >> rows;
+    cout << "Enter the size of cols: " << endl; cin >> cols;
 }
 
 // Create matriz
@@ -16,10 +23,7 @@ void sizeMat(int *rows, int *cols) {
 int main()
 {
     int rows = 0, cols = 0;
-    sizeMat(&rows, &cols);
-
-
-
-
+    sizeMatP(&rows, &cols);
+    sizeMatR(rows, cols);
     return 0;
 }
