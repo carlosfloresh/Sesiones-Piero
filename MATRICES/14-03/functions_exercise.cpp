@@ -9,6 +9,13 @@ void sizeMat(int &rows, int &cols) {
 }
 
 // Create matriz
+int** createMatriz(int rows, int cols) {
+    int** mat = new int*[rows];
+    for(int i = 0; i < rows; ++i) {
+        mat[i] = new int[cols];
+    }
+    return mat;
+}
 
 // Insert data into matriz
 // Print
@@ -19,5 +26,6 @@ int main()
     sizeMat(rows, cols);
     cout << rows << endl;
     cout << cols << endl;
+    createMatriz(rows, cols);
     return 0;
 }
