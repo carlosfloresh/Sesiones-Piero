@@ -18,14 +18,40 @@ int** createMatriz(int rows, int cols) {
 }
 
 // Insert data into matriz
+void insertMatriz(int** mat, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << "mat[" << i << "][" << j << "] = ";
+            cin >> mat[i][j];
+        }
+    }
+}
+
 // Print
+void printMatriz(int **mat, int rows, int cols) {
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            cout << mat[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+
+// Leak memory
+void deleteMatriz(int **mat, int rows) {
+    for(int i = 0; i < rows; ++i) {
+        delete[] mat[i];
+    }
+    delete[] mat;
+}
 
 int main()
 {
     int rows = 0, cols = 0;
     sizeMat(rows, cols);
-    cout << rows << endl;
-    cout << cols << endl;
-    createMatriz(rows, cols);
+    int** mat = createMatriz(rows, cols);
+    insertMatriz(mat, rows, cols);
+    printMatriz(mat, rows, cols);
+    deleteMatriz(mat, rows);
     return 0;
 }
