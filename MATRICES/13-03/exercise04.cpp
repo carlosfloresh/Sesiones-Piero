@@ -50,17 +50,12 @@ void deleteMatriz(int **mat, int rows) {
     delete[] mat;
 }
 
-int** createMixOfTwoMatricez(int **mat1, int **mat2, int rows, int cols) {
-    int** mat = new int*[rows];
-    for(int i = 0; i < rows; ++i) {
-        mat[i] = new int[cols];
-    }
+void sumMatricez(int **mat1, int **mat2, int** mat3, int rows, int cols) {
     for(int i = 0; i < rows; ++i) {
         for(int j = 0; j < cols; ++j) {
-            mat[i][j] = mat1[i][j] + mat2[i][j];
+            mat3[i][j] = mat1[i][j] + mat2[i][j];
         }
     }
-    return mat;
 }
 
 int main()
@@ -78,7 +73,8 @@ int main()
     cout<<"Your mat 2 is:"<<endl;
     printMatriz(mat2, rows, cols);
     cout<<"your mashup is: "<<endl;
-    int** mat3 = createMixOfTwoMatricez(mat1, mat2, rows, cols);
+    int** mat3 = createMatriz(rows, cols);
+    sumMatricez(mat1, mat2, mat3, rows, cols);
     printMatriz(mat3, rows, cols);
     return 0;
 }
